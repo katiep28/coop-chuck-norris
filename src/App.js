@@ -16,7 +16,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Katies React
+          Katies React App
         </a>
       </header>
     </div>
