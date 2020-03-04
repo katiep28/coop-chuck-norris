@@ -44,18 +44,18 @@ class NameSearch extends React.Component {
     render() {
         return (
             <div>
-            <div className="row">
-                <div className="col-4 col-lg-4" >
+            <div className="row padding-left">
+                <div className="col-6 col-lg-4" >
                     <input
                         id="firstNameId"
                         type="text"
-                        className="form-control form-control-lg"
-                        placeholder="First Name" style={{ height: "40px" }}
+                        className="form-control"
+                        placeholder="First Name" style={{ height: "40px"}}
                         onKeyPress={this.handleKeyPress}
                         value={this.state.firstName}
                         onChange={this.updateName} />
                 </div>
-                <div className="col-4 col-lg-4" >
+                <div className="col-6 col-lg-4" >
                     <input
                         id="secondNameId"
                         type="text"
@@ -65,7 +65,7 @@ class NameSearch extends React.Component {
                         value={this.state.secondName}
                         onChange={this.updateName} />
                 </div>
-                <div className="col-2 col-lg-2">
+                <div className="col-12 col-lg-2">
                 <button type="button"
                     style={{ height: "40px"}}
                     className="btn btn-success"

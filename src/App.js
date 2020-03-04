@@ -69,16 +69,15 @@ class App extends React.Component {
         <br />
         <br />
         <div className="row">
-          <div className="col-2 col-lg-2">
+          <div className="col-6 col-lg-2">
             <RandomJoke
               getRandomJokeFunc={this.getRandomJoke}
               key="1" />
           </div>
  
-          <div className="col-2 col-lg-2">
+          <div className="col-6 col-sm-6 col-lg-2 paddingleft paddingabove">
             <button type="button"
-              style={{ height: "40px" }}
-              className="btn btn-success"
+              className="btn btn-success paddingabove"
               onClick={this.setVisibility}>
               Search Joke
             </button>

@@ -14,7 +14,6 @@ class RandomJoke extends React.Component {
         return (
             <div className="col-12 col-lg-12">
                 <button type="button"
-                    style={{ height: "40px"}}
                     className="btn btn-success"
                     onClick={this.onButtonPress}>
                     Get Random Joke
