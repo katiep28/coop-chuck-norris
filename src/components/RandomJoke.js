@@ -1,22 +1,28 @@
 import React from 'react';
 
+class RandomJoke extends React.Component {
+    state = {
+        drinkName: ""
+    }
 
-class App extends React.Component {
+    onButtonPress = (event) => {
 
-  state = {
-  }
-  render() {
+        this.props.getRandomJokeFunc();
 
-    return (
-      <div>
-        <div className="row">
-          <div className="col-12 col-lg-12">
-            
-          </div>
-        </div>
-      </div>
-    );
-  }
+    }
+
+    render() {
+        return (
+            <div className="col-12 col-lg-12">
+                <button type="button"
+                    style={{ height: "40px"}}
+                    className="btn btn-success"
+                    onClick={this.onButtonPress}>
+                    Get Random Joke
+                </button>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default RandomJoke;

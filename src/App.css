@@ -5,6 +5,10 @@ h1{
   color: aliceblue;
   text-align: center;
 }
+h3{
+  color: aliceblue;
+  text-align: left;
+}
 
 body {
   background-image: url("./images/norris.jpg");

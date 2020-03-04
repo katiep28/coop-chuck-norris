@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import RandomJoke from './components/RandomJoke';
 
@@ -9,6 +8,25 @@ const axios = require('axios');
 class App extends React.Component {
 
   state = {
+    jokeData : [],
+    jokeValues: []
+  }
+
+  getRandomJoke = () => {
+
+    
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]')
+      .then((response) => {
+console.log(response);
+
+        this.setState({
+          jokeData: response.data,
+          jokeValues : response.data.value
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
   }
   render() {
 
@@ -19,15 +37,16 @@ class App extends React.Component {
             <h1>Chuck Norris Jokes</h1>
           </div>
         </div>
-
+        <br/>
+        <br/>
         <div className="row">
-          <div className="col-6 col-lg-6">
-            <RandomJoke/>
-                  {/* searchCocktailFunc={this.searchCocktailByName}
-                  showRecipeFunc={this.showRecipe}
-                  key="0" /> */}
+          <div className="col-4 col-lg-4">      
+            <RandomJoke
+                  getRandomJokeFunc={this.getRandomJoke}
+                  key="1" /> 
           </div>
-          <div className="col-6 col-lg-6">
+          <div className="col-8 col-lg-8"> 
+            <h3>  {this.state.jokeValues.joke}</h3>
           </div>
         </div>
       </div>
