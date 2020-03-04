@@ -13,7 +13,9 @@ class NameSearch extends React.Component {
         }
     }
     onButtonPress =() => {
-        this.checkName();
+        if (!this.checkName()){
+            return;
+        }
 
         this.props.getJokeWithNameFunc(this.state.firstName, this.state.secondName);
         
@@ -21,10 +23,14 @@ class NameSearch extends React.Component {
     checkName = () => {
         if (this.state.firstName === "") {
             alert("ERROR: You must enter a First Name");
+            return false;
         }
         if (this.state.secondName === ""){
             alert("ERROR: You must enter a Second Name");
+            return false;
         }
+        return true;
+        
     }
     updateName = (event) => {
         if (event.target.id === "firstNameId"){

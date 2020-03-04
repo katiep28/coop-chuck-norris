@@ -40,7 +40,8 @@ class App extends React.Component {
 
         this.setState({
           jokeData: response.data,
-          jokeValues: response.data.value
+          jokeValues: response.data.value,
+          display: false
         })
       })
       .catch(function (error) {
@@ -94,7 +95,7 @@ class App extends React.Component {
         <br/>
         <br/>
         <div className = "row">
-          <div className="col-12 col-lg-12">
+          <div className="col-6 col-lg-6">
             <h3>  {this.state.jokeValues.joke}</h3>
           </div>
         </div>
