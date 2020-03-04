@@ -16,8 +16,25 @@ class App extends React.Component {
 
   getRandomJoke = () => {
 
-
     axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]')
+      .then((response) => {
+        console.log(response);
+
+        this.setState({
+          jokeData: response.data,
+          jokeValues: response.data.value
+        })
+      })
+      .catch(function (error) {
+        console.log(error);
+      })
+  }
+  getJokeWithName =(firstName, secondName) => {
+    
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript&firstName=' + firstName + 
+              '&lastName=' + secondName)
+    
+    // axios.get('http://api.icndb.com/jokes/random?escape=javascript&firstName=John&lastName=Doe')
       .then((response) => {
         console.log(response);
 
@@ -51,18 +68,12 @@ class App extends React.Component {
         <br />
         <br />
         <div className="row">
-          <div className="col-4 col-lg-4">
+          <div className="col-2 col-lg-2">
             <RandomJoke
               getRandomJokeFunc={this.getRandomJoke}
               key="1" />
           </div>
-          <div className="col-8 col-lg-8">
-            <h3>  {this.state.jokeValues.joke}</h3>
-          </div>
-        </div>
-        <br/>
-        <br/>
-        <div className="row">
+ 
           <div className="col-2 col-lg-2">
             <button type="button"
               style={{ height: "40px" }}
@@ -71,12 +82,20 @@ class App extends React.Component {
               Search Joke
             </button>
           </div>
-          <div className="col-10 col-lg-10">
+          <div className="col-8 col-lg-8">
             {this.state.display &&
               <NameSearch
                 display={this.state.display}
+                getJokeWithNameFunc={this.getJokeWithName}
                 key="2" />
             }
+          </div>
+        </div>
+        <br/>
+        <br/>
+        <div className = "row">
+          <div className="col-12 col-lg-12">
+            <h3>  {this.state.jokeValues.joke}</h3>
           </div>
         </div>
       </div>
