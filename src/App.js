@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import RandomJoke from './components/RandomJoke';
+import NameSearch from './components/NameSearch';
 
 
 const axios = require('axios');
@@ -9,7 +10,8 @@ class App extends React.Component {
 
   state = {
     jokeData : [],
-    jokeValues: []
+    jokeValues: [],
+    display : false
   }
 
   getRandomJoke = () => {
@@ -28,7 +30,17 @@ console.log(response);
         console.log(error);
       })
   }
-  render() {
+
+  setVisibility = () => {
+
+    this.setState({
+      display : true
+    })
+    
+  }
+  render()
+    {
+
 
     return (
       <div>
@@ -47,6 +59,25 @@ console.log(response);
           </div>
           <div className="col-8 col-lg-8"> 
             <h3>  {this.state.jokeValues.joke}</h3>
+          </div>
+        </div>
+        <div className="row">
+           <div className="col-4 col-lg-4"> 
+              <button type="button"
+                    style={{ height: "40px"}}
+                    className="btn btn-success"
+                    onClick= {this.setVisibility}>
+                    Search Joke
+                </button>
+            </div> 
+            <div className="col-4 col-lg-4">      
+
+
+            {this.state.display && 
+            <NameSearch
+                  display={this.state.displa}
+                  key="2" /> 
+                  }
           </div>
         </div>
       </div>

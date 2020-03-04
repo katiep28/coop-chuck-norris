@@ -2,13 +2,12 @@ import React from 'react';
 
 class RandomJoke extends React.Component {
     state = {
-        drinkName: ""
+       
     }
 
     onButtonPress = (event) => {
 
         this.props.getRandomJokeFunc();
-
     }
 
     render() {
