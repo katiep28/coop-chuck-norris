@@ -9,21 +9,21 @@ const axios = require('axios');
 class App extends React.Component {
 
   state = {
-    jokeData : [],
+    jokeData: [],
     jokeValues: [],
-    display : false
+    display: false
   }
 
   getRandomJoke = () => {
 
-    
+
     axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]')
       .then((response) => {
-console.log(response);
+        console.log(response);
 
         this.setState({
           jokeData: response.data,
-          jokeValues : response.data.value
+          jokeValues: response.data.value
         })
       })
       .catch(function (error) {
@@ -34,12 +34,11 @@ console.log(response);
   setVisibility = () => {
 
     this.setState({
-      display : true
+      display: true
     })
-    
+
   }
-  render()
-    {
+  render() {
 
 
     return (
@@ -49,35 +48,35 @@ console.log(response);
             <h1>Chuck Norris Jokes</h1>
           </div>
         </div>
-        <br/>
-        <br/>
+        <br />
+        <br />
         <div className="row">
-          <div className="col-4 col-lg-4">      
+          <div className="col-4 col-lg-4">
             <RandomJoke
-                  getRandomJokeFunc={this.getRandomJoke}
-                  key="1" /> 
+              getRandomJokeFunc={this.getRandomJoke}
+              key="1" />
           </div>
-          <div className="col-8 col-lg-8"> 
+          <div className="col-8 col-lg-8">
             <h3>  {this.state.jokeValues.joke}</h3>
           </div>
         </div>
+        <br/>
+        <br/>
         <div className="row">
-           <div className="col-4 col-lg-4"> 
-              <button type="button"
-                    style={{ height: "40px"}}
-                    className="btn btn-success"
-                    onClick= {this.setVisibility}>
-                    Search Joke
-                </button>
-            </div> 
-            <div className="col-4 col-lg-4">      
-
-
-            {this.state.display && 
-            <NameSearch
-                  display={this.state.displa}
-                  key="2" /> 
-                  }
+          <div className="col-2 col-lg-2">
+            <button type="button"
+              style={{ height: "40px" }}
+              className="btn btn-success"
+              onClick={this.setVisibility}>
+              Search Joke
+            </button>
+          </div>
+          <div className="col-10 col-lg-10">
+            {this.state.display &&
+              <NameSearch
+                display={this.state.display}
+                key="2" />
+            }
           </div>
         </div>
       </div>
