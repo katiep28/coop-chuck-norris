@@ -55,7 +55,7 @@ class App extends React.Component {
   render() {
 
     return (
-      <div>
+      <div className="container-fluid text-block">
         <div className="row">
           <div className="col-12 col-lg-12">
             <h1>Chuck Norris Jokes</h1>
@@ -89,7 +89,7 @@ class App extends React.Component {
         <br />
         <br />
         <div className="row">
-          <div className="col-6 col-lg-6">
+          <div className="col-12 col-lg-6">
             <h3>  {this.state.jokeValues.joke}</h3>
           </div>
         </div>

@@ -64,7 +64,7 @@ class NameSearch extends React.Component {
         return (
         
             <div className="row padding-left">
-                <div className="col-6 col-lg-10" >
+                <div className="col-12 col-lg-10" >
                     <input
                         id="nameId"
                         type="text"
@@ -76,7 +76,7 @@ class NameSearch extends React.Component {
                 </div>
                 
                 <div className="col-12 col-lg-2">
-                    <button type="button"
+                    <button type="button "
                       style={{ height: "40px"}}
                       className="btn btn-success"
                       onClick={this.onButtonPress}>
