@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/coop-chuck-norris/static/css/main.ea6d4da3.chunk.css",
+    "main.js": "/coop-chuck-norris/static/js/main.aa9233c2.chunk.js",
+    "main.js.map": "/coop-chuck-norris/static/js/main.aa9233c2.chunk.js.map",
+    "runtime-main.js": "/coop-chuck-norris/static/js/runtime-main.2abdb413.js",
+    "runtime-main.js.map": "/coop-chuck-norris/static/js/runtime-main.2abdb413.js.map",
+    "static/js/2.31afb66c.chunk.js": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js",
+    "static/js/2.31afb66c.chunk.js.map": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js.map",
+    "index.html": "/coop-chuck-norris/index.html",
+    "precache-manifest.52d65a340153703c0e527d7682a9e624.js": "/coop-chuck-norris/precache-manifest.52d65a340153703c0e527d7682a9e624.js",
+    "service-worker.js": "/coop-chuck-norris/service-worker.js",
+    "static/css/main.ea6d4da3.chunk.css.map": "/coop-chuck-norris/static/css/main.ea6d4da3.chunk.css.map",
+    "static/js/2.31afb66c.chunk.js.LICENSE.txt": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/coop-chuck-norris/static/media/norris.fcc5a2c4.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2abdb413.js",
+    "static/js/2.31afb66c.chunk.js",
+    "static/css/main.ea6d4da3.chunk.css",
+    "static/js/main.aa9233c2.chunk.js"
+  ]
+}
