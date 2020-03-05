@@ -6,7 +6,7 @@ class NameSearch extends React.Component {
         specialCharacters : ["1","2","3","4","5","6","7","8","9","0",
                              "!","@","£","$","%","^","&","*","(",")","_","+","=",
                              "{","}","[","]",";",":","|","<",">",",",".",
-                             "\"","'","`","~","±","§","€"]
+                             "\"","'","`","~","±","§","€","/","\\"]
     }
 
     handleKeyPress = (e) => {
@@ -25,8 +25,8 @@ class NameSearch extends React.Component {
         const secondName = this.state.name.substring((indexOfSpace+1),this.state.name.length);
 
         this.props.getJokeWithNameFunc(firstName, secondName);
-        
     }
+
     checkName = () => {
         if (this.state.name === "") {
             alert("ERROR: You must enter a name");
@@ -36,16 +36,6 @@ class NameSearch extends React.Component {
             alert("ERROR: You must enter a first name and a second name separted with a space");
             return false;
         }
-
-        if (!this.checkSpecialCharacters()) {
-            alert("ERROR: Your name must not contain numbers or special characters");
-            return false;
-        }
-        return true;
-    }
-
-    checkSpecialCharacters = () => {
-
         let error = true;
 
         this.state.specialCharacters.map(char => {
@@ -53,14 +43,17 @@ class NameSearch extends React.Component {
                 error = false;
                 return error;
             }
+            return error;
         });
-        if (error === true) {
-            return true;
-        }
-        else{
+
+        if (error === false) {
+            alert("ERROR: Your name must not contain numbers or special characters");
             return false;
         }
+
+        return true;
     }
+
     updateName = (event) => {
         if (event.target.id === "nameId"){
           this.setState({ name: event.target.value })
@@ -69,7 +62,7 @@ class NameSearch extends React.Component {
 
     render() {
         return (
-            <div>
+        
             <div className="row padding-left">
                 <div className="col-6 col-lg-10" >
                     <input
@@ -90,8 +83,6 @@ class NameSearch extends React.Component {
                       Search
                     </button>
                 </div>
-            </div>
-
             </div>
         );
     }

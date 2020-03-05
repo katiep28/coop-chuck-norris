@@ -16,9 +16,8 @@ class App extends React.Component {
 
   getRandomJoke = () => {
 
-    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]')
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript')
       .then((response) => {
-        console.log(response);
 
         this.setState({
           jokeData: response.data,
@@ -29,14 +28,11 @@ class App extends React.Component {
         console.log(error);
       })
   }
-  getJokeWithName =(firstName, secondName) => {
-    
-    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript&firstName=' + firstName + 
-              '&lastName=' + secondName)
-    
-    // axios.get('http://api.icndb.com/jokes/random?escape=javascript&firstName=John&lastName=Doe')
+  getJokeWithName = (firstName, secondName) => {
+
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript&firstName=' + firstName +
+      '&lastName=' + secondName)
       .then((response) => {
-        console.log(response);
 
         this.setState({
           jokeData: response.data,
@@ -58,7 +54,6 @@ class App extends React.Component {
   }
   render() {
 
-
     return (
       <div>
         <div className="row">
@@ -74,7 +69,7 @@ class App extends React.Component {
               getRandomJokeFunc={this.getRandomJoke}
               key="1" />
           </div>
- 
+
           <div className="col-6 col-sm-6 col-lg-2 paddingleft paddingabove">
             <button type="button"
               className="btn btn-success paddingabove"
@@ -91,9 +86,9 @@ class App extends React.Component {
             }
           </div>
         </div>
-        <br/>
-        <br/>
-        <div className = "row">
+        <br />
+        <br />
+        <div className="row">
           <div className="col-6 col-lg-6">
             <h3>  {this.state.jokeValues.joke}</h3>
           </div>
