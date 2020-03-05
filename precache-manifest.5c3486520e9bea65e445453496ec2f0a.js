@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8a8787dc849f2a8ebe84d5274888107a",
+    "revision": "7891c47847e261093df0a57e25b9b6f9",
     "url": "/coop-chuck-norris/index.html"
   },
   {
-    "revision": "3983d7acaaacd838ccf5",
-    "url": "/coop-chuck-norris/static/css/main.ea6d4da3.chunk.css"
+    "revision": "c8ea2a2876c0c56fb32b",
+    "url": "/coop-chuck-norris/static/css/main.1b260e8a.chunk.css"
   },
   {
     "revision": "b09f61c6223a65b3a57f",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "3983d7acaaacd838ccf5",
-    "url": "/coop-chuck-norris/static/js/main.6bb8bc8a.chunk.js"
+    "revision": "c8ea2a2876c0c56fb32b",
+    "url": "/coop-chuck-norris/static/js/main.6a633604.chunk.js"
   },
   {
     "revision": "5731c5700310dedcf651",

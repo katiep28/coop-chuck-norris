@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/coop-chuck-norris/static/css/main.ea6d4da3.chunk.css",
-    "main.js": "/coop-chuck-norris/static/js/main.6bb8bc8a.chunk.js",
-    "main.js.map": "/coop-chuck-norris/static/js/main.6bb8bc8a.chunk.js.map",
+    "main.css": "/coop-chuck-norris/static/css/main.1b260e8a.chunk.css",
+    "main.js": "/coop-chuck-norris/static/js/main.6a633604.chunk.js",
+    "main.js.map": "/coop-chuck-norris/static/js/main.6a633604.chunk.js.map",
     "runtime-main.js": "/coop-chuck-norris/static/js/runtime-main.2abdb413.js",
     "runtime-main.js.map": "/coop-chuck-norris/static/js/runtime-main.2abdb413.js.map",
     "static/js/2.31afb66c.chunk.js": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js",
     "static/js/2.31afb66c.chunk.js.map": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js.map",
     "index.html": "/coop-chuck-norris/index.html",
-    "precache-manifest.e16087fd87ab4bc223c96203ac2ed8e9.js": "/coop-chuck-norris/precache-manifest.e16087fd87ab4bc223c96203ac2ed8e9.js",
+    "precache-manifest.5c3486520e9bea65e445453496ec2f0a.js": "/coop-chuck-norris/precache-manifest.5c3486520e9bea65e445453496ec2f0a.js",
     "service-worker.js": "/coop-chuck-norris/service-worker.js",
-    "static/css/main.ea6d4da3.chunk.css.map": "/coop-chuck-norris/static/css/main.ea6d4da3.chunk.css.map",
+    "static/css/main.1b260e8a.chunk.css.map": "/coop-chuck-norris/static/css/main.1b260e8a.chunk.css.map",
     "static/js/2.31afb66c.chunk.js.LICENSE.txt": "/coop-chuck-norris/static/js/2.31afb66c.chunk.js.LICENSE.txt",
     "static/media/App.css": "/coop-chuck-norris/static/media/norris.fcc5a2c4.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2abdb413.js",
     "static/js/2.31afb66c.chunk.js",
-    "static/css/main.ea6d4da3.chunk.css",
-    "static/js/main.6bb8bc8a.chunk.js"
+    "static/css/main.1b260e8a.chunk.css",
+    "static/js/main.6a633604.chunk.js"
   ]
 }
