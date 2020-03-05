@@ -16,7 +16,7 @@ class App extends React.Component {
 
   getRandomJoke = () => {
 
-    axios.get('https://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript')
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript')
       .then((response) => {
 
         this.setState({
@@ -30,7 +30,7 @@ class App extends React.Component {
   }
   getJokeWithName = (firstName, secondName) => {
 
-    axios.get('https://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript&firstName=' + firstName +
+    axios.get('http://api.icndb.com/jokes/random?exclude=[explicit]?escape=javascript&firstName=' + firstName +
       '&lastName=' + secondName)
       .then((response) => {
 
